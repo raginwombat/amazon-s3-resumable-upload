@@ -32,7 +32,7 @@ def set_log(LoggingLevel, this_file_name):
     file_path = os.path.split(os.path.abspath(__file__))[0]
     log_path = file_path + '/s3_migration_log'
     if not os.path.exists(log_path):
-        os.system(f"mkdir {log_path}")
+        os.mkdir(log_path)
     start_time = datetime.datetime.now().isoformat().replace(':', '-')[:19]
     _log_file_name = f'{log_path}/{this_file_name}-{start_time}.log'
     print('Log file:', _log_file_name)

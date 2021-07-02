@@ -118,7 +118,7 @@ if __name__ == '__main__':
 
     file_path = os.path.split(os.path.abspath(__file__))[0]
     ddb_result_path = file_path + '/s3_migration_ddb_result'
-    os.system('mkdir ' + ddb_result_path)
+    os.mkdir(ddb_result_path)
     this_file_name = os.path.splitext(os.path.basename(__file__))[0]
     t = time.localtime()
     start_time = f'{t.tm_year}-{t.tm_mon}-{t.tm_mday}-{t.tm_hour}-{t.tm_min}-{t.tm_sec}'
